@@ -3,52 +3,293 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FS Digital Services</title>
 
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E
+%3Crect width='100' height='100' rx='20' fill='%23071b36'/%3E
+%3Ctext x='50' y='62' font-size='42' text-anchor='middle' fill='%2300d9ff' font-family='Arial' font-weight='bold'%3EFS%3C/text%3E
+%3C/svg%3E">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f5f7fb;color:#222}
-header{background:#071b36;color:white;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
-.logo{font-size:30px;font-weight:bold;color:#00d9ff}
-nav a{color:white;text-decoration:none;margin-left:20px;font-size:16px}
-.hero{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');background-size:cover;background-position:center;color:white;text-align:center;padding:130px 20px}
-.hero h1{font-size:55px;margin-bottom:20px}
-.hero p{font-size:22px;margin-bottom:35px}
-.btn{display:inline-block;padding:15px 35px;background:#00d9ff;color:#071b36;text-decoration:none;border-radius:10px;font-weight:bold;font-size:18px;border:none;cursor:pointer}
-section{padding:80px 8%}
-.title{text-align:center;font-size:42px;margin-bottom:50px;color:#071b36}
-.services,.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
-.card,.price-card,.selected-box{background:white;padding:35px;border-radius:18px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.08)}
-.card{cursor:pointer;transition:.3s}
-.card:hover{transform:translateY(-10px);background:#eaf8ff}
-.card h3,.price-card h3{color:#071b36;font-size:25px;margin-bottom:15px}
-.card p,.price-card p{color:#666;line-height:1.6}
-.selected-box{margin-top:35px;border:3px solid #00d9ff;display:none}
-.selected-box h3{font-size:32px;color:#071b36;margin-bottom:15px}
-.selected-price{font-size:42px;color:#00a6ff;font-weight:bold;margin:15px 0}
-.demo{background:#eef5ff}
-.demo-box{background:white;padding:40px;border-radius:20px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.08)}
-.demo-box img{width:100%;border-radius:15px;margin-bottom:25px}
-.price{font-size:42px;color:#00a6ff;margin-bottom:20px;font-weight:bold}
-.contact{background:#071b36;color:white;text-align:center}
-.contact p{font-size:22px;margin:10px 0}
-footer{background:#03101f;color:white;text-align:center;padding:18px}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#071b36;
+    color:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#00d9ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:16px;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:130px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#00d9ff;
+    color:#071b36;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    font-size:18px;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* SECTION */
+
+section{
+    padding:80px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+    color:#071b36;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#eef9ff;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#071b36;
+    font-size:25px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* SELECTED BOX */
+
+.selected-box{
+    margin-top:35px;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border:3px solid #00d9ff;
+    display:none;
+}
+
+.selected-box h3{
+    font-size:35px;
+    color:#071b36;
+    margin-bottom:20px;
+}
+
+.selected-price{
+    font-size:45px;
+    color:#00a6ff;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+/* DEMO */
+
+.demo{
+    background:#eef5ff;
+}
+
+.demo-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.demo-box img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.demo-box h3{
+    font-size:35px;
+    color:#071b36;
+    margin-bottom:15px;
+}
+
+.demo-box p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+/* PRICE */
+
+.prices{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.price-card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.price-card h3{
+    color:#071b36;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:42px;
+    color:#00a6ff;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#071b36;
+    color:white;
+    text-align:center;
+}
+
+.contact p{
+    font-size:22px;
+    margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+    background:#03101f;
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
-header{flex-direction:column}
-nav{margin-top:15px}
-nav a{display:inline-block;margin:8px}
-.hero h1{font-size:36px}
-.hero p{font-size:18px}
-.title{font-size:32px}
+
+header{
+    flex-direction:column;
 }
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.title{
+    font-size:32px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">FS Digital Services</div>
+
 <nav>
 <a href="#">Home</a>
 <a href="#services">Services</a>
@@ -56,112 +297,237 @@ nav a{display:inline-block;margin:8px}
 <a href="#prices">Prices</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
+
 <h1>Professional Website Design</h1>
-<p>We Create Modern Business Websites, Transport Websites, Invoice Systems & Custom Software</p>
-<a class="btn" href="https://wa.me/971508392038">Contact On WhatsApp</a>
+
+<p>
+We Create Modern Business Websites,
+Transport Websites, Invoice Systems
+& Custom Software
+</p>
+
+<a class="btn" href="https://wa.me/971508392038">
+Contact On WhatsApp
+</a>
+
 </section>
 
+<!-- SERVICES -->
+
 <section id="services">
+
 <h2 class="title">Select Your Service</h2>
 
 <div class="services">
 
-<div class="card" onclick="selectService('Business Website','AED 199','Professional business website with mobile friendly design, WhatsApp button and clean company look.')">
+<div class="card"
+onclick="selectService(
+'Business Website',
+'AED 199',
+'Professional business website with modern design and mobile support.'
+)">
+
 <h3>Business Website</h3>
+
 <p>Click to see details and rate.</p>
+
 </div>
 
-<div class="card" onclick="selectService('Transport Website','AED 299','Modern transport website for logistics, cargo, booking, contact and company profile.')">
+<div class="card"
+onclick="selectService(
+'Transport Website',
+'AED 299',
+'Modern transport and logistics website for your company.'
+)">
+
 <h3>Transport Website</h3>
+
 <p>Click to see details and rate.</p>
+
 </div>
 
-<div class="card" onclick="selectService('Invoice Software','AED 499','Invoice software with customer record, reports, print/download and business management.')">
+<div class="card"
+onclick="selectService(
+'Invoice Software',
+'AED 499',
+'Invoice and report system with customer management.'
+)">
+
 <h3>Invoice Software</h3>
+
 <p>Click to see details and rate.</p>
+
 </div>
 
-<div class="card" onclick="selectService('Custom Software','AED 699+','Custom system according to your business work, reports, database and special features.')">
+<div class="card"
+onclick="selectService(
+'Custom Software',
+'AED 699+',
+'Custom software according to your business needs.'
+)">
+
 <h3>Custom Software</h3>
+
 <p>Click to see details and rate.</p>
+
 </div>
 
 </div>
+
+<!-- SELECTED -->
 
 <div class="selected-box" id="selectedBox">
+
 <h3 id="serviceName"></h3>
+
 <p id="serviceDetail"></p>
+
 <div class="selected-price" id="servicePrice"></div>
-<a id="whatsappLink" class="btn" href="https://wa.me/971508392038">Order On WhatsApp</a>
+
+<a class="btn" id="whatsappBtn" href="#">
+Order On WhatsApp
+</a>
+
 </div>
 
 </section>
 
+<!-- DEMO -->
+
 <section class="demo" id="demo">
+
 <h2 class="title">Website Demo</h2>
 
 <div class="demo-box">
+
 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+
 <h3>Your Website Can Look Like This</h3>
-<p>Client can see demo, select service, check rate and contact you on WhatsApp.</p>
-<a class="btn" href="https://wa.me/971508392038">Start Your Website</a>
+
+<p>
+Clients can see demo website,
+select service and directly contact you.
+</p>
+
+<a class="btn" href="https://wa.me/971508392038">
+Start Your Website
+</a>
+
 </div>
+
 </section>
 
+<!-- PRICE -->
+
 <section id="prices">
-<h2 class="title">All Packages</h2>
+
+<h2 class="title">Website Packages</h2>
 
 <div class="prices">
 
 <div class="price-card">
+
 <h3>Basic Website</h3>
+
 <div class="price">AED 199</div>
-<p>1 Page Website<br><br>Mobile Friendly<br><br>WhatsApp Button<br><br>Fast Design</p>
+
+<p>
+1 Page Website<br><br>
+Mobile Friendly<br><br>
+WhatsApp Button<br><br>
+Fast Design
+</p>
+
 </div>
 
 <div class="price-card">
+
 <h3>Business Website</h3>
+
 <div class="price">AED 399</div>
-<p>3-5 Pages<br><br>Modern Design<br><br>Contact Form<br><br>Professional Look</p>
+
+<p>
+3-5 Pages<br><br>
+Modern Design<br><br>
+Contact Form<br><br>
+Professional Look
+</p>
+
 </div>
 
 <div class="price-card">
+
 <h3>Custom System</h3>
+
 <div class="price">AED 699</div>
-<p>Invoice Software<br><br>Report System<br><br>Customer Database<br><br>Custom Features</p>
+
+<p>
+Invoice Software<br><br>
+Report System<br><br>
+Customer Database<br><br>
+Custom Features
+</p>
+
 </div>
 
 </div>
+
 </section>
 
+<!-- CONTACT -->
+
 <section class="contact" id="contact">
+
 <h2 class="title">Contact Us</h2>
+
 <p><b>Name:</b> Faheem</p>
+
 <p><b>Mobile:</b> 0508392038</p>
+
 <p><b>WhatsApp:</b> 0508392038</p>
+
 <br>
-<a class="btn" href="https://wa.me/971508392038">Send WhatsApp Message</a>
+
+<a class="btn" href="https://wa.me/971508392038">
+Send WhatsApp Message
+</a>
+
 </section>
 
 <footer>
+
 © 2026 FS Digital Services - All Rights Reserved
+
 </footer>
 
 <script>
+
 function selectService(name, price, detail){
-    document.getElementById("selectedBox").style.display = "block";
-    document.getElementById("serviceName").innerText = name;
-    document.getElementById("servicePrice").innerText = price;
-    document.getElementById("serviceDetail").innerText = detail;
 
-    let message = "Hello FS Digital Services, I want " + name + " package. Rate: " + price;
-    document.getElementById("whatsappLink").href = "https://wa.me/971508392038?text=" + encodeURIComponent(message);
+document.getElementById("selectedBox").style.display="block";
 
-    document.getElementById("selectedBox").scrollIntoView({behavior:"smooth"});
+document.getElementById("serviceName").innerText=name;
+
+document.getElementById("servicePrice").innerText=price;
+
+document.getElementById("serviceDetail").innerText=detail;
+
+let msg = "Hello FS Digital Services, I want " + name + " Package. Rate: " + price;
+
+document.getElementById("whatsappBtn").href =
+"https://wa.me/971508392038?text=" + encodeURIComponent(msg);
+
+document.getElementById("selectedBox")
+.scrollIntoView({behavior:"smooth"});
+
 }
+
 </script>
 
 </body>
