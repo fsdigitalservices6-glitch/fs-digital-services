@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="google-site-verification" content="It_WHxZamk83pSI..." />
+
 <title>FS Digital Services</title>
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
@@ -13,521 +15,342 @@
 %3C/svg%3E">
 
 <style>
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:#f5f7fb;
-    color:#222;
+background:#f5f7fb;
+color:#222;
 }
 
-/* HEADER */
-
 header{
-    background:#071b36;
-    color:white;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
+background:#071b36;
+color:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-    font-size:30px;
-    font-weight:bold;
-    color:#00d9ff;
+font-size:30px;
+font-weight:bold;
+color:#00d9ff;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-size:16px;
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:16px;
 }
 
-/* HERO */
-
 .hero{
-    background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:130px 20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:white;
 }
 
 .hero h1{
-    font-size:60px;
-    margin-bottom:20px;
+font-size:55px;
+margin-bottom:20px;
 }
 
 .hero p{
-    font-size:22px;
-    margin-bottom:35px;
+font-size:22px;
+margin-bottom:35px;
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#00d9ff;
-    color:#071b36;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-    font-size:18px;
-    border:none;
-    cursor:pointer;
-    transition:.3s;
+display:inline-block;
+padding:15px 35px;
+background:#00d9ff;
+color:#071b36;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+font-size:18px;
 }
-
-.btn:hover{
-    background:white;
-}
-
-/* SECTION */
 
 section{
-    padding:80px 8%;
+padding:80px 8%;
 }
 
 .title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
-    color:#071b36;
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#071b36;
 }
 
-/* SERVICES */
-
 .services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    padding:35px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    cursor:pointer;
-    transition:.3s;
+background:white;
+padding:35px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    background:#eef9ff;
+transform:translateY(-10px);
 }
 
 .card h3{
-    margin-bottom:15px;
-    color:#071b36;
-    font-size:25px;
+margin-bottom:15px;
+font-size:28px;
+color:#071b36;
 }
 
-.card p{
-    color:#666;
-    line-height:1.6;
+.price-box{
+margin-top:20px;
+padding:15px;
+background:#071b36;
+color:white;
+border-radius:12px;
+font-size:22px;
+font-weight:bold;
+display:none;
 }
 
-/* SELECTED BOX */
-
-.selected-box{
-    margin-top:35px;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    border:3px solid #00d9ff;
-    display:none;
+.selected{
+border:3px solid #00d9ff;
 }
 
-.selected-box h3{
-    font-size:35px;
-    color:#071b36;
-    margin-bottom:20px;
+.about{
+background:white;
+border-radius:20px;
+padding:50px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+line-height:1.8;
+font-size:18px;
 }
-
-.selected-price{
-    font-size:45px;
-    color:#00a6ff;
-    font-weight:bold;
-    margin:20px 0;
-}
-
-/* DEMO */
-
-.demo{
-    background:#eef5ff;
-}
-
-.demo-box{
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.demo-box img{
-    width:100%;
-    border-radius:15px;
-    margin-bottom:25px;
-}
-
-.demo-box h3{
-    font-size:35px;
-    color:#071b36;
-    margin-bottom:15px;
-}
-
-.demo-box p{
-    font-size:18px;
-    color:#555;
-    margin-bottom:20px;
-}
-
-/* PRICE */
-
-.prices{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.price-card{
-    background:white;
-    padding:35px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.price-card h3{
-    color:#071b36;
-    font-size:28px;
-    margin-bottom:15px;
-}
-
-.price{
-    font-size:42px;
-    color:#00a6ff;
-    margin-bottom:20px;
-    font-weight:bold;
-}
-
-/* CONTACT */
 
 .contact{
-    background:#071b36;
-    color:white;
-    text-align:center;
+background:#071b36;
+color:white;
+text-align:center;
+border-radius:20px;
+padding:60px 20px;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
 }
 
 .contact p{
-    font-size:22px;
-    margin:10px 0;
+font-size:20px;
+margin-bottom:25px;
 }
-
-/* FOOTER */
 
 footer{
-    background:#03101f;
-    color:white;
-    text-align:center;
-    padding:18px;
+background:#000;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
-header{
-    flex-direction:column;
-}
-
-nav{
-    margin-top:15px;
-}
-
-nav a{
-    display:inline-block;
-    margin:8px;
-}
-
 .hero h1{
-    font-size:38px;
+font-size:38px;
 }
 
 .hero p{
-    font-size:18px;
+font-size:18px;
 }
 
-.title{
-    font-size:32px;
+header{
+flex-direction:column;
 }
 
+nav{
+margin-top:10px;
 }
-
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">FS Digital Services</div>
 
 <nav>
-<a href="#">Home</a>
 <a href="#services">Services</a>
-<a href="#demo">Demo</a>
-<a href="#prices">Prices</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
-
 </header>
-
-<!-- HERO -->
 
 <section class="hero">
 
-<h1>Professional Website Design</h1>
+<div>
+
+<h1>Professional Website & Software Services</h1>
 
 <p>
-We Create Modern Business Websites,
-Transport Websites, Invoice Systems
-& Custom Software
+Business Website, Invoice Software, Transport Website & Custom Systems
 </p>
 
-<a class="btn" href="https://wa.me/971508392038">
+<a class="btn" href="https://wa.me/971508392038" target="_blank">
 Contact On WhatsApp
 </a>
 
+</div>
 </section>
-
-<!-- SERVICES -->
 
 <section id="services">
 
-<h2 class="title">Select Your Service</h2>
+<h2 class="title">Our Services</h2>
 
 <div class="services">
 
-<div class="card"
-onclick="selectService(
-'Business Website',
-'AED 199',
-'Professional business website with modern design and mobile support.'
-)">
+<div class="card" onclick="showPrice(this,'AED 500')">
 
 <h3>Business Website</h3>
 
-<p>Click to see details and rate.</p>
+<p>
+Modern websites for shops, companies and businesses.
+</p>
+
+<div class="price-box">
+Starting Price: AED 500
+</div>
 
 </div>
 
-<div class="card"
-onclick="selectService(
-'Transport Website',
-'AED 299',
-'Modern transport and logistics website for your company.'
-)">
+<div class="card" onclick="showPrice(this,'AED 800')">
 
 <h3>Transport Website</h3>
 
-<p>Click to see details and rate.</p>
+<p>
+Professional transport and logistics websites.
+</p>
+
+<div class="price-box">
+Starting Price: AED 800
+</div>
 
 </div>
 
-<div class="card"
-onclick="selectService(
-'Invoice Software',
-'AED 499',
-'Invoice and report system with customer management.'
-)">
+<div class="card" onclick="showPrice(this,'AED 1000')">
 
 <h3>Invoice Software</h3>
 
-<p>Click to see details and rate.</p>
+<p>
+Invoice systems with reports and Excel export.
+</p>
+
+<div class="price-box">
+Starting Price: AED 1000
+</div>
 
 </div>
 
-<div class="card"
-onclick="selectService(
-'Custom Software',
-'AED 699+',
-'Custom software according to your business needs.'
-)">
+<div class="card" onclick="showPrice(this,'AED 1500')">
 
 <h3>Custom Software</h3>
 
-<p>Click to see details and rate.</p>
+<p>
+Custom systems according to client requirements.
+</p>
 
+<div class="price-box">
+Starting Price: AED 1500
 </div>
 
 </div>
 
-<!-- SELECTED -->
-
-<div class="selected-box" id="selectedBox">
-
-<h3 id="serviceName"></h3>
-
-<p id="serviceDetail"></p>
-
-<div class="selected-price" id="servicePrice"></div>
-
-<a class="btn" id="whatsappBtn" href="#">
-Order On WhatsApp
-</a>
-
 </div>
-
 </section>
 
-<!-- DEMO -->
+<section id="about">
 
-<section class="demo" id="demo">
+<h2 class="title">Why Choose Us?</h2>
 
-<h2 class="title">Website Demo</h2>
-
-<div class="demo-box">
-
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
-
-<h3>Your Website Can Look Like This</h3>
+<div class="about">
 
 <p>
-Clients can see demo website,
-select service and directly contact you.
+FS Digital Services provides modern websites and business software solutions.
+We create professional systems for transport companies, invoice management,
+shops and custom business needs.
 </p>
-
-<a class="btn" href="https://wa.me/971508392038">
-Start Your Website
-</a>
-
-</div>
-
-</section>
-
-<!-- PRICE -->
-
-<section id="prices">
-
-<h2 class="title">Website Packages</h2>
-
-<div class="prices">
-
-<div class="price-card">
-
-<h3>Basic Website</h3>
-
-<div class="price">AED 199</div>
-
-<p>
-1 Page Website<br><br>
-Mobile Friendly<br><br>
-WhatsApp Button<br><br>
-Fast Design
-</p>
-
-</div>
-
-<div class="price-card">
-
-<h3>Business Website</h3>
-
-<div class="price">AED 399</div>
-
-<p>
-3-5 Pages<br><br>
-Modern Design<br><br>
-Contact Form<br><br>
-Professional Look
-</p>
-
-</div>
-
-<div class="price-card">
-
-<h3>Custom System</h3>
-
-<div class="price">AED 699</div>
-
-<p>
-Invoice Software<br><br>
-Report System<br><br>
-Customer Database<br><br>
-Custom Features
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2 class="title">Contact Us</h2>
-
-<p><b>Name:</b> Faheem</p>
-
-<p><b>Mobile:</b> 0508392038</p>
-
-<p><b>WhatsApp:</b> 0508392038</p>
 
 <br>
 
-<a class="btn" href="https://wa.me/971508392038">
-Send WhatsApp Message
+<p>
+✔ Fast Service <br>
+✔ Modern Design <br>
+✔ Mobile Friendly Website <br>
+✔ WhatsApp Support <br>
+✔ Affordable Prices
+</p>
+
+</div>
+</section>
+
+<section id="contact">
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+Name: Faheem
+</p>
+
+<p>
+WhatsApp: 0508392038
+</p>
+
+<a class="btn" href="https://wa.me/971508392038" target="_blank">
+Chat On WhatsApp
 </a>
 
+</div>
 </section>
 
 <footer>
-
 © 2026 FS Digital Services - All Rights Reserved
-
 </footer>
 
 <script>
+function showPrice(card,price){
 
-function selectService(name, price, detail){
+document.querySelectorAll('.card').forEach(box=>{
+box.classList.remove('selected');
+box.querySelector('.price-box').style.display='none';
+});
 
-document.getElementById("selectedBox").style.display="block";
-
-document.getElementById("serviceName").innerText=name;
-
-document.getElementById("servicePrice").innerText=price;
-
-document.getElementById("serviceDetail").innerText=detail;
-
-let msg = "Hello FS Digital Services, I want " + name + " Package. Rate: " + price;
-
-document.getElementById("whatsappBtn").href =
-"https://wa.me/971508392038?text=" + encodeURIComponent(msg);
-
-document.getElementById("selectedBox")
-.scrollIntoView({behavior:"smooth"});
-
+card.classList.add('selected');
+card.querySelector('.price-box').style.display='block';
 }
-
 </script>
 
 </body>
